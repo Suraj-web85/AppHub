@@ -1,0 +1,144 @@
+.register-p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bg1);
+}
+.reg-sec {
+  width: 30%;
+  min-height: 100vh;
+  background: url(../../assets/images/tealbg.jpg) center no-repeat;
+  background-size: cover;
+  /* filter: grayscale(100%) sepia(100%); */
+  /* flex: 1; */
+}
+.reg-sec2 {
+  width: 70%;
+  margin: 0 auto;
+  max-width: 800px;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  padding: 2rem 2rem;
+}
+.reg-su-input {
+  outline: none;
+  border: 1.4px solid var(--b1);
+  margin: 5px 0px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--t2);
+  width: 100%;
+  background-color: var(--bg1);
+  font-size: inherit;
+}
+.reg-su-input::placeholder {
+  color: var(--t2);
+  opacity: 0.6; /* Firefox */
+}
+.reg-su-form {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+  width: 100%;
+  padding: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gridspan2 {
+  grid-column: span 2;
+}
+
+.reg-su-form label[for="disclose1"],
+.reg-su-form label[for="disclose2"],
+.reg-su-form label[for="terms"] {
+  margin: 20px 0;
+}
+.reg-su-check {
+  height: 1rem !important;
+  width: 1rem !important;
+  margin: 5px 10px;
+  text-align: center;
+  background-color: var(--bg2);
+}
+.btn-container {
+  width: 100%;
+  justify-content: end !important;
+  grid-column-start: 2;
+}
+.su-form-btn {
+  width: 120px;
+}
+.su-form-btn:hover {
+  cursor: pointer;
+  background-color: var(--t1);
+  color: var(--bg1);
+}
+.sub-btn {
+  margin-left: 1rem;
+}
+.reg-su-form label {
+  padding: 2px;
+  width: 100%;
+}
+.field-con {
+  gap: 8px;
+}
+.reg-sec2 h1 {
+  text-align: center;
+  margin: 20px;
+}
+.validation-msg {
+  color: var(--t1);
+}
+.msg-red {
+  color: red;
+}
+.msg-red + input {
+  border-color: red !important;
+}
+@media (max-width: 800px) {
+  .reg-sec {
+    display: none;
+  }
+  .reg-sec2 {
+    width: 100%;
+    padding: 2rem 2%;
+  }
+}
+
+.registerpopup {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  background-color: var(--bg1);
+  width: 100%;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  padding: 5%;
+  z-index: -2;
+}
+.registerpopup > .mh {
+  margin-bottom: 10px;
+}
+.reg-popup-visible {
+  opacity: 1;
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .reg-su-form label {
+    grid-column: span 2;
+  }
+  .reg-su-form label[for="disclose1"],
+  .reg-su-form label[for="disclose2"],
+  .reg-su-form label[for="terms"] {
+    margin: 10px 0;
+  }
+}

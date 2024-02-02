@@ -1,0 +1,125 @@
+/* Upload Form CSS */
+.apk-upload {
+  min-height: 90vh;
+}
+.gu-data .mh {
+  margin-bottom: 20px;
+}
+.gu-data {
+  margin-bottom: 30px;
+}
+.gu-data ul {
+  color: var(--t2);
+  padding-left: 20px;
+}
+.form-fw {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.apkup-desc {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 2rem 0;
+}
+.form-fw .sh {
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+.form-fw .sh,
+.apup-tagcon,
+.form-fw > label:nth-child(3),
+.form-fw > label:nth-child(4),
+.apkup-desc label:nth-child(2) {
+  grid-column: span 2;
+}
+
+.apup-tagcon {
+  padding: 10px;
+  gap: 10px;
+  justify-content: flex-start !important;
+  flex-wrap: wrap;
+}
+.apup-tag {
+  /* border: 1.4px solid var(--b1); */
+  padding: 10px 50px 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: var(--bg1) !important;
+  background-color: var(--t1);
+  /* color: var(--t2); */
+}
+.tag-remove {
+  position: absolute;
+  right: 10px;
+  border: 1px solid var(--b1);
+  border-radius: 50%;
+  padding: 0 5px;
+  scale: 1.2;
+  transition: all 0.3s ease-in-out;
+}
+.tag-remove:hover {
+  cursor: pointer;
+  background-color: var(--bg1);
+  color: var(--t1);
+  border-color: transparent;
+}
+
+.apkup-imgcon {
+  align-items: flex-start !important;
+  flex-direction: column;
+  grid-column: span 2;
+}
+
+.form-fw input::file-selector-button {
+  background-color: var(--bg2);
+  padding: 10px 14px;
+  border-radius: 25px;
+  color: var(--t2);
+  margin: 5px 10px 5px 10px;
+  border: 1.4px solid var(--b1);
+}
+
+.validation-msg {
+  color: var(--t1);
+}
+.msg-red {
+  color: red;
+}
+.msg-red + input,
+.msg-red + textarea {
+  border-color: red !important;
+}
+.apkup-final {
+  margin: 20px 0;
+  align-items: flex-start !important;
+  flex-direction: column;
+}
+
+.apkup-btn {
+  max-width: 200px;
+  transition: all 0.3s ease-in-out;
+  margin: 50px 0;
+}
+.apkup-btn:hover {
+  background-color: var(--t1);
+  border-color: transparent;
+  color: var(--bg1);
+}
+
+.redimp {
+  font-weight: bold;
+  color: tomato !important;
+}
+
+@media (max-width: 768.5px) {
+  .form-fw,
+  .apkup-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

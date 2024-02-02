@@ -1,0 +1,248 @@
+.apk-page {
+  width: 100%;
+}
+.ap-banner {
+  width: 100%;
+  height: clamp(460px, 100vh, 600px);
+  background: url(../../assets/images/imgban6.jpg);
+  background-position: top !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  /* background-color: black; */
+}
+.ap-apinfo {
+  width: 100%;
+  background: radial-gradient(
+    circle at 80% -40%,
+    transparent 0%,
+    var(--bg1) 75%
+  );
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+
+.install-btn {
+  width: 20%;
+  min-width: 200px;
+}
+.ap-apklabel {
+  gap: 30px;
+  margin: 20px 0;
+}
+.ap-apklabel img {
+  width: 100px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 14px;
+}
+.ap-apreview {
+  border-right: 2px solid var(--b1);
+  padding: 10px 30px 10px 0;
+  /* color: var(--t2) !important; */
+}
+.loader-info {
+  margin: 20px 0;
+}
+.loader-info span {
+  color: red;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+}
+.ap-apsizeinfo {
+  gap: 10px;
+}
+.ap-apdownloads p:last-child,
+.ap-apreview p:last-child {
+  color: var(--t2);
+}
+.ap-apdownloads p:first-child,
+.ap-apreview p:first-child {
+  font-weight: bold;
+  color: var(--t1);
+  text-shadow: 0.1px 0.1px 10px var(--bg1);
+}
+
+.ap-images-car {
+  margin: 2rem 5% 0 5%;
+}
+.ap-images {
+  margin: 2%;
+}
+.ap-images img {
+  height: 230px !important;
+  object-fit: cover;
+}
+
+.ap-ap-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+  align-items: start !important;
+}
+.ap-ap-data .sh {
+  color: var(--t2) !important;
+}
+.ap-ap-info {
+  grid-column: span 2;
+}
+.ap-apcomments {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.ap-apsupport {
+  grid-row-start: 3;
+}
+.ap-ap-info span {
+  color: var(--t1) !important;
+}
+.ap-apdesc {
+  margin-top: 20px;
+  color: var(--t2) !important;
+}
+
+/* APP Support */
+.ap-apsupport {
+  align-items: flex-start !important;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 5%;
+}
+.ap-apsupport svg {
+  font-size: 2rem;
+  color: var(--t1);
+}
+.ap-apsuinfo {
+  gap: 20px;
+}
+
+/* APP Tags */
+.ap-aptagcon {
+  margin: 20px 0;
+  flex-wrap: wrap;
+  justify-content: start !important;
+}
+.ap-aptagcon > .para {
+  text-wrap: nowrap;
+  padding: 2px 14px;
+  border: 1.4px solid var(--b1);
+  border-radius: 14px;
+  margin: 5px;
+  font-weight: 100 !important;
+}
+.ap-apratecon {
+  flex-direction: column;
+  padding: 2rem 0;
+}
+.ap-aprating {
+  font-size: 5rem;
+  line-height: 5rem;
+  color: var(--t1);
+}
+.stars {
+  font-size: 2rem;
+  color: var(--t1);
+}
+.star:first-child,
+.star:last-child {
+  transform: translateY(-8px);
+}
+.star:nth-child(3) {
+  transform: translateY(5px);
+}
+/* APP Comments */
+.ap-apcommentcon {
+  margin: 2rem 0;
+  flex-direction: column;
+  gap: 30px;
+}
+.ap-apcomment {
+  gap: 10px;
+  align-items: flex-start !important;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.ap-apcomprof,
+.ap-apcom-item {
+  gap: 10px;
+  justify-content: flex-start !important;
+}
+.ap-apcomprof img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.4px solid var(--b1);
+  object-fit: cover;
+}
+.ap-apcomprof > .para {
+  color: var(--t2);
+}
+
+@media (max-width: 1024.5px) {
+  .ap-apinfo {
+    background: radial-gradient(
+      circle at 100% 0%,
+      transparent 0%,
+      var(--bg1) 75%
+    );
+    /* background: rgba(255, 255, 255, 0.7); */
+  }
+  .ap-ap-data {
+    gap: 4% 0%;
+    margin-bottom: 4rem;
+  }
+  .ap-apinfo {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+  .ap-aprate,
+  .ap-aptags,
+  .ap-apsupport {
+    grid-row: 2;
+  }
+  .ap-ap-info {
+    grid-column: span 3;
+  }
+  .ap-apcomments {
+    grid-row: 3;
+    grid-column: span 3;
+  }
+}
+@media (max-width: 800px) {
+  .ap-apsupport {
+    grid-row: 4;
+  }
+  .ap-aptags {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 576px) {
+  .ap-ap-data {
+    gap: 20px;
+    margin-bottom: 20rem;
+  }
+  .ap-apinfo {
+    background: radial-gradient(
+      circle at 100% 20%,
+      transparent 0%,
+      var(--bg1) 75%
+    );
+    /* background: rgba(255, 255, 255, 0.7); */
+  }
+  .ap-aptags {
+    grid-row: 3;
+    grid-column: span 3;
+  }
+  .ap-apcomments {
+    grid-row: 4;
+    grid-column: span 3;
+  }
+  .ap-apsupport {
+    grid-row: 5;
+    grid-column: span 3;
+    padding: 0 0;
+  }
+  .ap-aprate{
+    grid-column: span 3;
+  }
+}

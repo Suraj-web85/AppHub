@@ -1,0 +1,157 @@
+/* Global CSS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body,
+html {
+  width: 100% !important;
+  overflow-x: hidden !important;
+  /* user-select: none; */
+  min-height: 100vh;
+  overflow-y: auto;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+  scroll-behavior: smooth;
+}
+:root {
+  /* Background Colors */
+  /* Light Background Color 1 & 2 */
+  --lbg1: #fff;
+  --lbg2: #eee;
+  /* Dark Background Color 1 & 2 */
+  --dbg1: #101923;
+  --dbg2: #1b293b;
+
+  --logo-cl: #046380;
+  /* #3CC7FF */
+  /* Text Colors */
+  /* --ltxc1: #3d9970; */
+  --ltxc1: teal;
+  --ltxc2: #555;
+  --dtxc1: #ffc300;
+  --dtxc2: #fff;
+
+  /* Border Color */
+  --lboc1: #999;
+  --dboc1: #ccc;
+
+  /* Box Shadow Color */
+  --dbosc1: #444;
+  --lbosc1: #ccc;
+}
+
+.light {
+  --bg1: var(--lbg1);
+  --bg2: var(--lbg2);
+  --t1: var(--ltxc1);
+  --t2: var(--ltxc2);
+  --b1: var(--lboc1);
+  --bs1: var(--lbosc1);
+}
+.dark {
+  --bg1: var(--dbg1);
+  --bg2: var(--dbg2);
+  --t1: var(--dtxc1);
+  --t2: var(--dtxc2);
+  --b1: var(--dboc1);
+  --bs1: var(--dbosc1);
+}
+.main {
+  width: 100%;
+  position: relative;
+  /* user-select: none; */
+  background-color: var(--bg1);
+}
+
+.contain {
+  padding: 1rem 5%;
+  width: 100%;
+}
+
+.mh {
+  color: var(--t1);
+  font-size: clamp(1.5rem, 1.286rem + 0.571vw, 1.8rem);
+}
+.sh {
+  color: var(--t1);
+  font-size: clamp(1.2rem, 0.986rem + 0.571vw, 1.5rem);
+}
+.mpara {
+  color: var(--t2);
+  font-size: clamp(0.9rem, 0.686rem + 0.571vw, 1.2rem);
+}
+.para {
+  text-decoration: none;
+  font-size: clamp(0.8rem, 0.586rem + 0.571vw, 1.01rem);
+  color: var(--t1);
+}
+.sspara {
+  color: var(--t2);
+  font-size: clamp(0.7rem, 0.613rem + 0.242vw, 1rem);
+}
+
+.aflex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll {
+  width: 100%;
+  overflow-y: scroll;
+  height: 100vh;
+  scrollbar-color: var(--t1) var(--t1);
+}
+.scroll::-webkit-scrollbar {
+  width: 7px;
+}
+.scroll::-webkit-scrollbar-track {
+  background-color: var(--bg2);
+  border-radius: 7px;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background: var(--t1);
+  border-radius: 7px;
+}
+
+/* Common CSS */
+.owl-nav {
+  margin: 0;
+  overflow: visible;
+}
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  border-radius: 50%;
+  top: 40%;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--bg1);
+  color: var(--t1);
+  height: 40px;
+  border: 1px solid var(--b1);
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  opacity: 0;
+}
+.owl-next {
+  right: -1%;
+}
+.owl-prev {
+  left: -1%;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: var(--t1);
+  border-color: transparent;
+  color: var(--bg1);
+  text-decoration: none;
+}
+
+.owl-carousel:hover .owl-nav button {
+  opacity: 1; /* Adjust the opacity value as needed */
+}
+

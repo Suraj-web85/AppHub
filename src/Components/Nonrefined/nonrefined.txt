@@ -1,0 +1,58 @@
+ const [isSubmit, setisSubmit] = useState(false);
+  const [formErrors, setformErrors] = useState({});
+
+  useEffect(() => {
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formdata);
+    }
+  }, [formErrors, formdata, isSubmit]);
+
+  const validate = (values) => {
+    const errors = {};
+    const nameRegex = /^[A-Za-z]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (
+      values.firstname.trim() !== "" &&
+      !nameRegex.test(values.firstname.trim())
+    ) {
+      errors.firstname = "FirstName should contain only Alphabets";
+    }
+    if (
+      values.lastname.trim() !== "" &&
+      !nameRegex.test(values.lastname.trim())
+    ) {
+      errors.lastname = "LastName should contain only Alphabets";
+    }
+    if (values.email.trim() !== "" && !emailRegex.test(values.email.trim())) {
+      errors.email = "Please Enter a Valid E-mail";
+    }
+    if (values.city.trim() !== "" && !nameRegex.test(values.city.trim())) {
+      errors.city = "City Name Must contain Alphabet";
+    }
+    if (
+      values.country.trim() !== "" &&
+      !nameRegex.test(values.country.trim())
+    ) {
+      errors.country = "Country Name Must contain only Alphabet";
+    }
+    return errors;
+  };
+
+  const handleNext = (e) => {
+    e.preventDefault();
+    if (Object.keys(formErrors).length === 0) {
+      changeFormnumber(2);
+      setisSubmit(true);
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormdata({ ...formdata, [name]: value });
+    setformErrors((prevErrors) => {
+      const errors = validate(formdata);
+
+      return errors;
+    });
+  };
